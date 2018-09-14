@@ -8,7 +8,7 @@ import java.util.*;
 
 public class AboutMe{
 
-  //make the varibles
+  //these are the variables
   public static String username;
   public static String name;
   public static String sign;
@@ -16,6 +16,7 @@ public class AboutMe{
   public String place;
   public String quote;
 
+//Julia's info
   public AboutMe() {
     username = "juliazhu"; // name
     name = "Julia Zhu";
@@ -28,6 +29,7 @@ public class AboutMe{
 
   public static void main(String[] args) {
 
+//starting point
     AboutMe Julia = new AboutMe();
     System.out.println(" ");
     System.out.println("~*~ Welcome to the Instant Insta Bio Creator! ~*~");
@@ -35,9 +37,11 @@ public class AboutMe{
     System.out.println("^ - ^  This is your current Insta Bio for: @juliazhu  ^ - ^");
     System.out.println(" ");
     System.out.println(" ");
+    //choose which one you would like to see from Julia's Profile
     System.out.println("What would you like to view? \n (Name) \n (Sign) \n (2 Words) \n (Place) \n (Quote)");
-    Scanner newIn = new Scanner(System.in);
+    Scanner newIn = new Scanner(System.in); //scanner for answer
 
+    // all possible outcomes
     String userIn = newIn.nextLine();
     if (userIn.equals("Name")){
       System.out.println("This user's name is " + Julia.name);
@@ -57,10 +61,11 @@ public class AboutMe{
 
     newIn.close();
 
+    //here to change the two variables that are changeable
     System.out.println(" ");
     System.out.println(" ");
     System.out.println("What would you like to change? \n (Change 2 Words) \n (Change Quote) ");
-    Scanner change = new Scanner(System.in);
+    Scanner change = new Scanner(System.in);//new scanner doesn't work?
 
     String boy = change.nextLine();
 
@@ -81,3 +86,4 @@ public class AboutMe{
     }
 
   }
+
