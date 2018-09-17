@@ -7,7 +7,7 @@ AboutMe
 /*
 When you look at many people's Instagram Bios, many of them are very similar
 That's why I wanted to make an "Instant Insta Bio Maker"
-Because everyone typically has SOMETHING one this list
+Because everyone typically has SOMETHING on this list
 */
 
 import java.util.*;
