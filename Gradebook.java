@@ -18,7 +18,9 @@ public class Gradebook {
 
 
 
+//(5) Class Subject and Teacher Code
 if(something.equals("5")){
+
   StringBuilder className = new StringBuilder();
 
   try {
@@ -38,81 +40,27 @@ if(something.equals("5")){
 
 }
 
+//(6) Student Roster
+if(something.equals("6")){
 
+  StringBuilder studentRoster = new String Builder();
 
-
-
-  }
-}
-/*
-  StringBuilder classRoster = new StringBuilder();
-
-  try{
+  try {
     File grades = new File("grades.txt");
-    Scanner ac = new Scanner(grades);
-
+    Scanner idk = new Scanner(grades);
+      
   }
 
-
-
-    //asfd
-
-
-
-
-    int numG = 0;
-    for (int i = 0; i < myStr.length() - 12; i++) {
-      if (myStr.substring(i, i + 12).equals("Dr. Anderson")) {
-        numG++;
-      }
-      else if (myStr.substring(i, i + 12).equals("Dr. Anderson")) {
-        numG++;
-      }
-    }
-    System.out.println("The professor's name is: " + numG);
-
-//grade spread
-try{
-
-  for (int j = 0; j < grades.length() - 5; j++) {
-      if (grades.substring(j, j + 5).equals(>= 90.0)) {
-          grade = 'A';
-      } else if (grades.substring(j, j + 5).equals(>= 80.0)) {
-          grade = 'B';
-      } else if (grades.substring(j, j + 5).equals(>= 70.0)) {
-          grade = 'C';
-      } else if (grades.substring(j, j + 5).equals(>= 60.0)) {
-          grade = 'D';
-      } else {
-          grade = 'F';
-      }
-    System.out.println("The grades of the studnets are " + grade);
+  catch (FileNotFoundException b){
+    b.printStackTrace;
+  }
+  System.out.println("Here is a list of all the students: " \n + studentRoster);
 
 }
+
+
+
+
+
+  }
 }
-*/
-
-
-/*
-    String userIn = newIn.nextLine();
-    Scanner newIn = new Scanner(System.in);
-
-    if(userIn.equals("1")){
-      System.out.println("The mean grade is ");
-    }
-    if(userIn.equals("2")){
-      System.out.println("The grade spread is ");
-    }
-    if(userIn.equals("3")){
-      System.out.println("The top grade is ");
-    }
-    if(userIn.equals("4")){
-      System.out.println("The lowest grade is ");
-    }
-    if(userIn.equals("5")){
-      System.out.println("The class subject and Teacher is ");
-    }
-    if(userIn.equals("6")){
-      System.out.println("The student roster consists of ");
-    }
-*/
