@@ -13,45 +13,45 @@ public class Gradebook {
   public static void main(String[] args) {
     System.out.println("Welcome to the Student Gradebook, what would you like to see?");
     System.out.println("1. Mean grade \n 2. Grade Spread \n 3. Top Grade \n 4. Lowest Grade \n 5. Class Subject and Teacher \n 6. Student Roster");
-
-    //scans the grades doc and prints it our in a line
-  /*  StringBuilder myStr = new StringBuilder();
-    int count = 0;
-    try {
-      File grades = new File("grades.txt");
-      Scanner sc = new Scanner(grades);
+    Scanner answer = new Scanner(System.in);
+    String something = answer.nextLine();
 
 
-      while (sc.hasNext()) { //checks to see if our file is empty
-        myStr.append(sc.next() + " ");
-        //count++;
-      }
+
+if(something.equals("5")){
+  StringBuilder className = new StringBuilder();
+
+  try {
+    File grades = new File("grades.txt");
+    Scanner bc = new Scanner(grades);
+      className.append(bc.next() + " ");
+      className.append(bc.next() + " ");
+      className.append(bc.next() + " ");
+      className.append(bc.next() + " ");
+      className.append(bc.next() + " ");
     }
-    catch (FileNotFoundException e) {
-      e.printStackTrace();
-    }
-*/
 
-    //System.out.println(myStr);
+  catch (FileNotFoundException c) {
+    c.printStackTrace();
+  }
+  System.out.println("The class and teacher is: " + className);
 
-    StringBuilder className = new StringBuilder();
+}
 
-    try {
-      File grades = new File("grades.txt");
-      Scanner bc = new Scanner(grades);
-        className.append(bc.next() + " ");
-        className.append(bc.next() + " ");
-        className.append(bc.next() + " ");
-        className.append(bc.next() + " ");
-        className.append(bc.next() + " ");
-      }
 
-    catch (FileNotFoundException c) {
-      c.printStackTrace();
-    }
-    System.out.println(className);
+
+
+
   }
 }
+/*
+  StringBuilder classRoster = new StringBuilder();
+
+  try{
+    File grades = new File("grades.txt");
+    Scanner ac = new Scanner(grades);
+
+  }
 
 
 
@@ -59,7 +59,7 @@ public class Gradebook {
 
 
 
-/*
+
     int numG = 0;
     for (int i = 0; i < myStr.length() - 12; i++) {
       if (myStr.substring(i, i + 12).equals("Dr. Anderson")) {
