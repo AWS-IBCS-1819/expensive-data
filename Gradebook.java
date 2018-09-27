@@ -31,6 +31,7 @@ if(something.equals("5")){
       className.append(bc.next() + " ");
       className.append(bc.next() + " ");
       className.append(bc.next() + " ");
+
     }
 
   catch (FileNotFoundException c) {
@@ -43,18 +44,30 @@ if(something.equals("5")){
 //(6) Student Roster
 if(something.equals("6")){
 
-  StringBuilder studentRoster = new String Builder();
+  StringBuilder studentRoster = new StringBuilder();
+  StringBuilder spaces = new StringBuilder();
+  StringBuilder studentGrades = new StringBuilder();
 
   try {
     File grades = new File("grades.txt");
     Scanner idk = new Scanner(grades);
-      
+    spaces.append(idk.next() + " ");
+    spaces.append(idk.next() + " ");
+    spaces.append(idk.next() + " ");
+    spaces.append(idk.next() + " ");
+    spaces.append(idk.next() + " ");
+    while (idk.hasNext()) {
+    studentRoster.append (idk.next() + " ");// append all the names into the StrinngBuilder for names
+    studentRoster.append (idk.next() + " " + "\n");
+    spaces.append(idk.next() + " ");
+    studentGrades.append(idk.next() + " ");
   }
+}
 
   catch (FileNotFoundException b){
-    b.printStackTrace;
+    b.printStackTrace();
   }
-  System.out.println("Here is a list of all the students: " \n + studentRoster);
+  System.out.println("Here is a list of all the students: \n" + studentRoster);
 
 }
 
@@ -64,3 +77,4 @@ if(something.equals("6")){
 
   }
 }
+
