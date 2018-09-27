@@ -16,7 +16,47 @@ public class Gradebook {
     Scanner answer = new Scanner(System.in);
     String something = answer.nextLine();
 
-//(1) Mean Grade
+//(1) Mean Grade *SOMEHOW HAVE TO FIX THIS*
+
+if (something.equals("1")){
+
+  Double original = 0.0;
+  Double add = 0.0;
+  StringBuilder mean = new StringBuilder();
+  StringBuilder sos = new StringBuilder();
+
+  try{
+    File grades = new File("grades.txt");
+    Scanner almost = new Scanner(grades);
+    sos.append(almost.next() + " ");
+    sos.append(almost.next() + " ");
+    sos.append(almost.next() + " ");
+    sos.append(almost.next() + " ");
+    sos.append(almost.next() + " ");
+
+    while(almost.hasNext()){
+      sos.append (almost.next() + " ");
+      sos.append (almost.next() + " ");
+      sos.append (almost.next() + " ");
+      mean.append (almost.next() + " ");
+      sos.append (almost.next() + " ");
+    }
+  }
+
+  catch (FileNotFoundException goodness){
+    goodness.printStackTrace();
+  }
+
+  for (int hon = 0; hon < mean.length(); hon = hon + 5){
+    Double watch = Double.parseDouble(mean.substring(hon, hon + 4));
+
+    add = add + watch;
+
+  }
+
+Double done = add/original;
+System.out.println("The mean of this class is: \n" + done);
+}
 
 
 //(2) Grade Spread
@@ -116,3 +156,4 @@ if(something.equals("6")){
 
   }
 }
+
