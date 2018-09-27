@@ -16,6 +16,8 @@ public class Gradebook {
     Scanner answer = new Scanner(System.in);
     String something = answer.nextLine();
 
+//(1) Mean Grade
+
 
 //(2) Grade Spread
 if(something.equals("2")){
@@ -33,7 +35,7 @@ if(something.equals("2")){
       freeSpace.append(hey.next() + " ");
 
       while (hey.hasNext()) {
-      freeSpace.append (hey.next() + " ");// append all the names into the StrinngBuilder for names
+      freeSpace.append (hey.next() + " ");
       freeSpace.append (hey.next() + " " + "\n");
       freeSpace.append(hey.next() + " ");
       studentGrades.append(hey.next() + " ");
@@ -48,6 +50,13 @@ if(something.equals("2")){
   System.out.println("Here are all the grades: \n " + studentGrades);
 
 }
+
+//(3) Top Grade
+
+
+//(4) Lowest Grade
+
+
 //(5) Class Subject and Teacher Code
 if(something.equals("5")){
 
@@ -87,7 +96,7 @@ if(something.equals("6")){
     spaces.append(idk.next() + " ");
     spaces.append(idk.next() + " ");
     while (idk.hasNext()) {
-    studentRoster.append (idk.next() + " ");// append all the names into the StrinngBuilder for names
+    studentRoster.append (idk.next() + " ");
     studentRoster.append (idk.next() + " " + "\n");
     spaces.append(idk.next() + " ");
     spaces.append(idk.next() + " ");
@@ -107,4 +116,3 @@ if(something.equals("6")){
 
   }
 }
-
