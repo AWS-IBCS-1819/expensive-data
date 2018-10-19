@@ -28,11 +28,11 @@ public class Blackjack {
 
     return a;
 
-
+//if the integer is 21 then the player won
     if(i == 21){
       System.out.println("Congrats, You won!");
     }
-
+//if the integer is over 21, then the play
     if(i >= 21){
       System.out.println("Boy, you went over. You lost.");
     }
@@ -46,7 +46,11 @@ public class Blackjack {
 
     System.out.println("Welcome to Blackjack.");
     System.out.println("Here is your hand: ");
+    System.out.println(userHand);
+    int 
 
+    //draws the three cards
+    //two for the user, one for the computer
     Blackjack c = new Blackjack();
       c.d.drawCard();
       c.userHand.add(c.d.drawCard());
@@ -69,3 +73,4 @@ public class Blackjack {
 }
 
 }
+
