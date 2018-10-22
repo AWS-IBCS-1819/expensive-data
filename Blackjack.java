@@ -38,39 +38,54 @@ public class Blackjack {
     }
 
     return null;
+
+  }
 */
-  //}
 
   public static void main(String[] args) { //wordy
+
+
     Blackjack b = new Blackjack();
 
     System.out.println("Welcome to Blackjack.");
     System.out.println("Here is your hand: ");
-    System.out.println(userHand);
-    int 
+  //  System.out.println(userHand);
+
 
     //draws the three cards
     //two for the user, one for the computer
-    Blackjack c = new Blackjack();
-      c.d.drawCard();
-      c.userHand.add(c.d.drawCard());
 
-      Blackjack e = new Blackjack();
-      e.d.drawCard();
-      e.userHand.add(e.d.drawCard());
+      b.d.drawCard();
+      b.userHand.add(b.d.drawCard());
 
-      Blackjack compy = new Blackjack();
-      compy.d.drawCard();
-      compy.compHand.add(compy.d.drawCard());
+      b.d.drawCard();
+      b.userHand.add(b.d.drawCard());
 
 
-    System.out.println("");
+    System.out.println(b.userHand.drawCard.get(0).getName);
+    System.out.println(" ");
+    System.out.println("This is the dealer's hand: ");
+    //dealer's hand
+      b.d.drawCard();
+      b.compHand.add(b.d.drawCard());
+    System.out.println(b.compHand.get(0).getName);
+    System.out.println(" ");
+
+    System.out.println("What would you like to do?");
+
+    Scanner in = new Scanner (System.in);
+    String name = in.nextLine();
+
+    System.out.println("(1) Hit");
+    System.out.println("(2) Stay");
+    System.out.println("(3) Quit Game");
+
     //System.out.println("Value: " + value);
   //  System.out.println("Your opponent is showing a " + );
 
+//hit needs a loop
 
 
 }
 
 }
-
