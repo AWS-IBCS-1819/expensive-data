@@ -5,39 +5,56 @@ Voting
 */
 
 
-import java.util.*;
 import java.io.*;
-
-public class votes{
-
-  public static void main(String[] args) {
-    System.out.println("How many times did Mr. Considine type a teacher's name?");
-    System.out.println("Let's see!");
-    StringBuilder hello = new StringBuilder();
-    StringBuilder bye = new StringBuilder();
-    StringBuilder ciao = new StringBuilder();
+import java.util.*;
 
 
-    try{
-      File file = new File("votes.txt");
-      Scanner m = new Scanner(file);
+public class votes {
 
-      for (int i = 0; i < 10;i++){
-        hello.append(m.next() + " ");
+public static void main(String[] args) {
+
+  System.out.println("Welcome to the ______ Teacher Awards!");
+  System.out.println("The ballots have been cast and the results are in!\n\n ====================== \n");
+
+  HashMap<String, Integer> votes = new HashMap<String, Integer>();
+
+
+  try {
+    File file = new File("votes.txt");
+    Scanner fr = new Scanner(file);
+
+    while (fr.hasNext()){
+      String temp = fr.next();
+      if (temp == null) {
+        break;
       }
-
-      while(m.hasNext()) {
-        hello.append(m.next() + " ");
-        hello.append(m.next() + "\n");
-        bye.append(m.next());
-        ciao.append(m.next());
+      else {
+        if (votes.containsKey(temp)) {
+          votes.replace(temp, votes.get(temp) + 1);
+        }
+        else {
+          votes.put(temp, 1);
+        }
       }
-
     }
 
-    catch (FileNotFoundException e){
-      e.printStackTrace();
-    }
-
+    System.out.println(votes);
   }
+  catch (FileNotFoundException e) {
+    e.printStackTrace();
+  }
+  
+   Set<String> keySet = votes.keySet();
+
+   ArrayList<String> listKeys = new ArrayList<String>(keySet);
+
+        System.out.println("List of Teachers:");
+
+        for (String key : listKeys){
+
+            System.out.println(key);
+        }
+}
+
+
 }
