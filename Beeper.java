@@ -35,6 +35,8 @@ package events;
  * Beeper.java requires no other files.
  */
 
+ //specific imports to see everything that they are going to use
+
 import java.awt.*;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -46,20 +48,20 @@ import java.awt.BorderLayout;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
-public class Beeper extends JPanel //shows that this class inherits componets from JPanel
+public class Beeper extends JPanel //shows that this class inherits componets from JPanel (superclass)
                     implements ActionListener { //uses ActionListener
-    JButton button; //button made
+    JButton button; // created instance variable of button
 
     public Beeper() { //constructor method
-        super(new BorderLayout()); //creates superclass from JPanel
+        super(new BorderLayout()); //constructor of superclass
         button = new JButton("Click Me"); // actually creating a button with that saying
         button.setPreferredSize(new Dimension(200, 80)); //making the size of the button
-        add(button, BorderLayout.CENTER);//puts it in the center of the frame
+        add(button, BorderLayout.CENTER);//puts it in the center of the frame (adds to the frame)
         button.addActionListener(this); //makes the button use ActionListener
     }
 
     public void actionPerformed(ActionEvent e) { // implements methods in the listener interface
-        Toolkit.getDefaultToolkit().beep(); //gets the basic needs for toolkit??
+        Toolkit.getDefaultToolkit().beep(); //can make sounds!!!
     }
 
 
@@ -71,7 +73,7 @@ public class Beeper extends JPanel //shows that this class inherits componets fr
       newContentPane.setOpaque(true); // shows the color of the newContentPane
       frame.setContentPane(newContentPane); //action to set the frame as ___
 
-      frame.pack(); //action to pack frame
+      frame.pack(); //sets to preferred size 
       frame.setVisible(true); //action to make the frame show up
     }
 }
